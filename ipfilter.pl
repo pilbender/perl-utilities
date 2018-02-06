@@ -46,12 +46,12 @@ foreach (@ipaddress) {
 } # End foreach
 
 print "\n";
-print "Total IP addresses scanned: $numberOfIPAddresses\n"; 
+print "Total IP addresses scanned: $totalNumberOfIPAddresses\n";
 
 # Identify if a line has an IP address on it
 sub identifyIPAddress {
   if (/\d+\.\d+\.\d+\.\d+/) {
-    $numberOfIPAddresses += 1;
+    $totalNumberOfIPAddresses += 1;
     $ipaddress = $&;
     #print "Here's an IP: $&\n";
     return 1;
